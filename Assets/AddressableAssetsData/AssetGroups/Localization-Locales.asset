@@ -83,12 +83,6 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: e1982f6b92e3c4454803b83ed11fe5b4
-    m_Address: English
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c5f6f4890b84d4a92976c1455be99808
     m_Address: Telugu (India)
     m_ReadOnly: 1
@@ -101,9 +95,15 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e1982f6b92e3c4454803b83ed11fe5b4
+    m_Address: English
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 78bdf713d65ad406e94552981323526a, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: 0519495bcbfc14777a490d5edb37b948, type: 2}
     - {fileID: 11400000, guid: 371fafa1958864034b5c683ec84a33cc, type: 2}
+    - {fileID: 11400000, guid: 0519495bcbfc14777a490d5edb37b948, type: 2}

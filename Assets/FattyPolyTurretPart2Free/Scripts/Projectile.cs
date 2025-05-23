@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SearchService;
 
 public class Projectile : MonoBehaviour {
 
@@ -40,12 +41,13 @@ public class Projectile : MonoBehaviour {
             Explosion();
             return;
         }
+        /*
 
         if (transform.position.y < -0.2F)
         {
             Explosion();
         }
-
+        */
         boomTimer -= Time.deltaTime;
         if (boomTimer < 0)
         {
@@ -102,13 +104,27 @@ public class Projectile : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.transform.tag == "Player")
+        if (other.transform.tag == "RedPlane" || other.transform.tag == "GreenPlane" || other.transform.tag == "RainbowPlane") ;
         {
-            Vector3 dir = other.transform.position - transform.position;
-            //Vector3 knockBackPos = other.transform.position * (-dir.normalized * knockBack);
-            Vector3 knockBackPos = other.transform.position + (dir.normalized * knockBack);
-            knockBackPos.y = 1;
-            other.transform.position = knockBackPos;
+            switch(other.transform.tag)
+            {
+                case "RedPlane":
+                    Spawner.Instance.spawnRedPlaneAfterTime(1.0f);
+                    break;
+
+                case "GreenPlane":
+                    Spawner.Instance.spawnGreenPlaneAfterTime(1.0f);
+                    break;
+
+                case "RainbowPlane":
+                    Spawner.Instance.spawnRainbowPlaneAfterTime(1.0f);
+                    break;
+                default: 
+                    Debug.Log("Probleme in Projectile.OnTriggerEnter with tag:" + other.transform.tag);
+                    break;
+
+            }
+            Destroy(other.transform.gameObject);
             Explosion();
         }
     }

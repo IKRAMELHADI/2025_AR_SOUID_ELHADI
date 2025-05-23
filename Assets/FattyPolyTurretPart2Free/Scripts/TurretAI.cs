@@ -75,11 +75,11 @@ public class TurretAI : MonoBehaviour {
                 if (animator != null)
                 {
                     animator.SetTrigger("Fire");
-                    ShootTrigger();
+                    //ShootTrigger();
                 }
                 else
                 {
-                    ShootTrigger();
+                   // ShootTrigger();
                 }
             }
         }
@@ -92,7 +92,7 @@ public class TurretAI : MonoBehaviour {
 
         for (int i = 0; i < colls.Length; i++)
         {
-            if (colls[i].tag == "Player")
+            if (colls[i].tag == "RedPlane")
             {
                 float dist = Vector3.Distance(transform.position, colls[i].transform.position);
                 if (dist < distAway)

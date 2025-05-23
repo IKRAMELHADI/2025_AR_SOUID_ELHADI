@@ -7,10 +7,12 @@ using UnityEngine.XR.ARSubsystems;
 [RequireComponent(typeof(ARRaycastManager))]
 public class PlaceObjectsOnPlane : MonoBehaviour
 {
+    public GameObject spawner;
+    public GameObject shootScript;
     [SerializeField]
     [Tooltip("Instantiates this prefab on a plane at the touch location.")]
     GameObject m_PlacedPrefab;
-
+    
     /// <summary>
     /// The prefab to instantiate on touch.
     /// </summary>
@@ -67,7 +69,14 @@ public class PlaceObjectsOnPlane : MonoBehaviour
 
                     if (m_NumberOfPlacedObjects < m_MaxNumberOfObjectsToPlace)
                     {
+
+                        Spawner.Instance.setTurretPosition(hitPose.position);
+                        Spawner.Instance.spawnRedPlane();
+                        Spawner.Instance.spawnGreenPlane();
+                        Spawner.Instance.spawnRainbowPlane();
+
                         spawnedObject = Instantiate(m_PlacedPrefab, hitPose.position, hitPose.rotation);
+                        shootScript.GetComponent<shoot>().turret= spawnedObject;
                         
                         m_NumberOfPlacedObjects++;
                     }
