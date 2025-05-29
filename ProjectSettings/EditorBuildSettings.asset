@@ -6,7 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+<<<<<<< HEAD
     path: Assets/UX/Scenes/UXManagerScene.unity
+=======
+    path: Assets/MaScenePrincipale.unity
+>>>>>>> 43f4865 (Ajout UI)
     guid: 5d9539f4c7ee5c74c85a038c90cb6e1b
   - enabled: 0
     path: Assets/ImageTracking/Scenes/ImageTracking.unity
