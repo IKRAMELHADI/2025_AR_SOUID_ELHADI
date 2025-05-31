@@ -74,5 +74,5 @@ Ce projet nous a permis de :
 - Apprendre à structurer un jeu complet avec des contraintes de performance
 - Travailler efficacement en binôme sur un projet technique et ludique
 
-➡ Le projet offre une base solide pour de futures évolutions : niveaux de difficulté, effets sonores, leaderboard en ligne, ou portage vers iOS via ARKit.
+=> Le projet offre une base solide pour de futures évolutions : niveaux de difficulté, effets sonores, leaderboard en ligne, ou portage vers iOS via ARKit.
 
